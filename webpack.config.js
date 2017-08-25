@@ -24,6 +24,16 @@ module.exports = {
                 loader: "ejs-loader"
             },
             {
+                test: /\.(png|jpg|jpeg|gif|svg)$/i,
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        limit: 2048,
+                        name: '[name].[hash].[ext]'
+                    }
+                }]
+            },
+            {
                 test: /\.html$/,
                 exclude: path.join(__dirname, 'node_modules'),
                 include: path.join(__dirname, 'src'),
