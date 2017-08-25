@@ -1,0 +1,4 @@
+function asd() {
+    return 'asdasdasdasa';
+    
+}
